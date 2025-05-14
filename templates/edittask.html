@@ -1,0 +1,22 @@
+
+    {% block content %}
+
+
+
+<h5>Edit Task</h5>
+<form action="{{ url_for('update_task', tid=task[0]) }}" method="POST">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{ task[1] }}" required><br>
+
+    <label for="status">status:</label>
+    <input type="text" id="status" name="status" value="{{ task[2] }}" required><br>
+
+    <label for="priority">priority:</label>
+    <input type="text" id="priority" name="priority" value="{{ task[3] }}" required><br>
+
+   
+
+    <input type="submit" value="">
+</form>
+{% endblock%}

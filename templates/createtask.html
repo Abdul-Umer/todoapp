@@ -1,0 +1,36 @@
+
+
+<form action="{{ url_for('createtask') }}" method="POST">
+    <div>
+        <label for="tid">Task ID</label>
+        <input type="text" id="tid" name="tid" required>
+    </div>
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="status">Status</label>
+        <input type="text" id="status" name="status" required>
+    </div>
+    <div>
+        <label for="priority">Priority</label>
+        <input type="text" id="priority" name="priority" required>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+<hr>
+
+    <h4 class="mt-4">Existing Tasks</h4>
+    {% if tasks %}
+      <ul class="list-group">
+        {% for t in tasks %}
+          <li class="list-group-item">
+            {{ t[0] }} — {{ t[1] }} — {{ t[2] }} — {{ t[3] }}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No tasks found.</p>
+    {% endif %}

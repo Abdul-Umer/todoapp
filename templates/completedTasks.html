@@ -1,0 +1,8 @@
+{% block content %}
+    <h3>Completed Tasks</h3>
+    <ul>
+    {% for t in tasks %}
+        <li>{{ t[0]}}</li>  <!-- assuming only 'name' is selected -->
+    {% endfor %}
+    </ul>
+{% endblock %}
