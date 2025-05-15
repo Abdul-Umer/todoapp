@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request,redirect,url_for
 from flask_mysqldb import MySQL
+
 app = Flask(__name__)
 app.secret_key = "my_secretkey"
 
